@@ -1,0 +1,127 @@
+
+@font-face {
+    font-family: 'SansitaOne';
+    src: url('font/SansitaOne.eot');
+    src: url('font/SansitaOne.eot?#iefix') format('embedded-opentype'),
+         url('font/SansitaOne.woff') format('woff'),
+         url('font/SansitaOne.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'oliver';
+    src: url('font/oliver.eot');
+    src: url('font/oliver.eot?#iefix') format('embedded-opentype'),
+         url('font/oliver.woff') format('woff'),
+         url('font/oliver.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font1{
+font-family: 'SansitaOne';
+font-size: 16px;
+}
+.font2{
+	font-family: 'oliver';
+	font-size: 20px;
+}
+body{
+	direction: rtl;
+	line-height: 40px;
+    font-smooth:always;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+.container{
+	margin: 0px auto 0px auto;
+	width: 950px;
+	height: auto;
+}
+.header img{
+	margin: 0px auto;
+	display: block;
+}
+li{
+	list-style-type: none;
+}
+li a{
+	display: block;
+	text-decoration: none;
+}
+div.menu{
+	width: 100%;
+	background-color: #fff;
+	height: 80px;
+}
+div.menu1{
+	margin: 0 auto;
+	width: 950px;
+	height: 68px;
+}
+div.menu li{
+	float: left;
+	border-left: 1px solid #C1C1C7;
+}
+div.menu li a{
+	width: 180px;
+	height: 50px;
+	text-align: center;
+	padding: 7px 0px;
+	color: #000;
+	font-size: 19px;
+	font-family: 'oliver';
+}
+div.menu li:first-child{
+	border: none;
+}
+.menu li span{
+	width: 180px;
+	height: 2px;
+	opacity: 0;
+	display: block;
+	background-color: #000;
+}
+.f-nav{
+	 z-index: 9999;
+	 position: fixed;
+	 top: 0; 
+	 width: 950px;
+	 right: 0;
+	 left: 0;
+}
+.container span{
+	height: 1px;
+	background-color: #C1C1C7;
+	width: 950px;
+	display: block;
+	margin-top: 15px;
+}
+.about{
+	background-image:  url('img/birds-a1.png'),url('img/albero1.png');
+	background-position: 38px 55px,top left;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 650px;
+}
+.design{
+	background: url('img/bg_third.png') no-repeat center;
+	width: 100%;
+	height: 560px;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.mywork{
+	background-image: url('img/pilalibri.png'), url('img/libri2.png');
+	background-repeat: no-repeat;
+	background-position: 110px 100px,320px 0px;
+	width: 100%;
+	height: 600px;
+}
+.contact{
+
+}
