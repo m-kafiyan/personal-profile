@@ -101,20 +101,21 @@ div.menu li:first-child{
 	display: block;
 	margin-top: 15px;
 }
-.about{
+.home{
 	background-image:  url('img/birds-a1.png'),url('img/albero1.png');
 	background-position: 38px 55px,top left;
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 650px;
 }
-.design{
+.about{
 	background: url('img/bg_third.png') no-repeat center;
 	width: 100%;
 	height: 560px;
 	background-attachment: fixed;
 	background-size: cover;
 }
+
 .mywork{
 	background-image: url('img/pilalibri.png'), url('img/libri2.png');
 	background-repeat: no-repeat;
