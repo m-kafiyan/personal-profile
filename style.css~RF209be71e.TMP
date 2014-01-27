@@ -102,8 +102,8 @@ div.menu li:first-child{
 	margin-top: 15px;
 }
 .home{
-	background-image:  url('img/birds-a1.png'),url('img/albero1.png'),url('img/notamusica1.png'),url('img/uccellino-rosa.png'),url('img/notamusica2.png');
-	background-position: 38px 55px, top left, 360px 460px,300px 550px,450px 400px;
+	background-image:  url('img/birds-a1.png'),url('img/albero1.png'),url('img/speech_bubble_2.png'),url('img/notamusica1.png'),url('img/uccellino-rosa.png');
+	background-position: 38px 55px, top left, 400px center , 230px 500px,320px 550px;
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 650px;
