@@ -37,24 +37,18 @@ jQuery(window).scroll(function(){
 	}
 });
 // menu scrolling............................
-	$('#nav').localScroll(800);
+	jQuery('#nav').localScroll(800);
 	
 	//.parallax(xPosition, speedFactor, outerHeight) options:
 	//xPosition - Horizontal position of the element
 	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
 	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-	// jQuery('#home').parallax("50%",0);
-	// jQuery('#about').parallax("50%", 0);
-	// jQuery('#design').parallax("50%", 0);
-	// jQuery('#third').parallax("50%", 0.3);
 
-	$('#home').parallax("50%", 0.1);
-	$('#about').parallax("50%", 0.1);
-	$('#mywork').parallax("50%", 0.3);
-	$('#gallery').parallax("50%", 0.3);
-
-
-
+	jQuery('#home').parallax("50%", 0.1);
+	jQuery('#about').parallax("50%", 0.1);
+	jQuery('#mywork').parallax("50%", 0.3);
+	jQuery('#gallery').parallax("50%", 0.3);
+	
 
 //gallery............................................................. 
 // imgHolder.mouseover(function(){
