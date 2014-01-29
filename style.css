@@ -36,6 +36,7 @@ body{
     padding: 0;
     margin: 0;
     background-color: #fff;
+    overflow-x:hidden; 
 }
 .container{
 	margin: 0px auto 0px auto;
@@ -94,6 +95,7 @@ div.menu li:first-child{
 	 width: 950px;
 	 right: 0;
 	 left: 0;
+	 padding-bottom: 20px;
 }
 .container span{
 	height: 1px;
@@ -175,3 +177,6 @@ a.mouseover-thumbnail-holder:hover .large-thumbnail-style {
   z-index:1;
   opacity:1;
 }
+.cover{*zoom:1;} 
+.cover:before,.cover:after{content:" ";display:table} 
+.cover:after{clear:both}
