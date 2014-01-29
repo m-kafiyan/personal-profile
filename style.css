@@ -134,6 +134,9 @@ height: 600px;
 	border: 8px solid #FAFAFA;
 	border-bottom-width: 30px;
 	border-radius: 2px;
+	margin-top: 15px;
+	width: 200px;
+	height: 200px;
 }
 .mywork{
 	/*background-image: url('img/pilalibri.png'), url('img/libri2.png');*/
@@ -144,4 +147,31 @@ height: 600px;
 }
 .contact{
 
+}
+a.mouseover-thumbnail-holder {
+  position:relative;
+  display:block;
+  float:left;
+  margin-right:10px;
+}
+.large-thumbnail-style {
+  display:block;
+  border:10px solid #fff;
+  box-shadow:0px 0px 5px #aaa;
+}
+a.mouseover-thumbnail-holder .large-thumbnail-style {
+  position:absolute;
+  top:0;
+  left:-9999px;
+  z-index:1;
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+}
+a.mouseover-thumbnail-holder:hover .large-thumbnail-style {
+  top:0;
+  left:105%;
+  z-index:1;
+  opacity:1;
 }
