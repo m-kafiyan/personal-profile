@@ -107,18 +107,17 @@ div.menu li:first-child{
 	background-position: 38px 55px, top left, 360px 460px,300px 550px,450px 400px !important;*/
 	background-image: url('img/albero2.png');
 	background-repeat: no-repeat;
-	width: 100%;
-	height: 650px;
+	min-width: 100%;
+	min-height: 650px;
 }
 .about{
 	/*background-image: url('img/bg_third.png'),url('img/el_cycle_green.png'),url('img/el_cycle_red.png'),url('img/el_cycle_yellow.png');*/
 	background-repeat: no-repeat;
 	background-image: url('img/bg_fourth1.png');
 	/*background-position: center,900px center,840px 80px,780px 300px !important;*/
-	width: 100%;
-	height: 600px;
+	min-width: 100%;
+	min-height: 600px;
 	background-attachment: fixed;
-	/*background-size: cover;*/
 }
 .gallery{
 width: 950px;
