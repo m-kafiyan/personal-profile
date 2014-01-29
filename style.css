@@ -104,7 +104,7 @@ div.menu li:first-child{
 	display: block;
 	margin-top: 15px;
 }
-.home{
+#home{
 	/*background-image:  url('img/birds-a1.png'),url('img/albero1.png'),url('img/notamusica1.png'),url('img/uccellino-rosa.png'),url('img/notamusica2.png');
 	background-position: 38px 55px, top left, 360px 460px,300px 550px,450px 400px !important;*/
 	background-image: url('img/albero2.png');
@@ -112,7 +112,7 @@ div.menu li:first-child{
 	min-width: 100%;
 	min-height: 650px;
 }
-.about{
+#about{
 	/*background-image: url('img/bg_third.png'),url('img/el_cycle_green.png'),url('img/el_cycle_red.png'),url('img/el_cycle_yellow.png');*/
 	background-repeat: no-repeat;
 	background-image: url('img/bg_fourth1.png');
@@ -121,17 +121,17 @@ div.menu li:first-child{
 	min-height: 600px;
 	background-attachment: fixed;
 }
-.gallery{
+#gallery{
 width: 950px;
 height: 600px;
 
 }
-.gallery li {
+#gallery li {
 	float: left;
 	margin-right: 15px;
 }
 
-.gallery li a {
+#gallery li a {
 	display: block;
 	border: 8px solid #FAFAFA;
 	border-bottom-width: 30px;
@@ -140,14 +140,14 @@ height: 600px;
 	width: 200px;
 	height: 200px;
 }
-.mywork{
+#mywork{
 	/*background-image: url('img/pilalibri.png'), url('img/libri2.png');*/
 	background-repeat: no-repeat;
 	/*background-position: 110px 100px,320px 0px !important;*/
 	width: 100%;
 	height: 600px;
 }
-.contact{
+#contact{
 
 }
 a.mouseover-thumbnail-holder {
