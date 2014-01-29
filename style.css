@@ -171,7 +171,7 @@ a.mouseover-thumbnail-holder .large-thumbnail-style {
 }
 a.mouseover-thumbnail-holder:hover .large-thumbnail-style {
   top:0;
-  left:105%;
+  left:205px;
   z-index:1;
   opacity:1;
 }
