@@ -37,5 +37,37 @@ jQuery(window).scroll(function(){
 	}
 });
 // menu scrolling............................
+jQuery('#nav').localScroll(800);
+	
+	//.parallax(xPosition, speedFactor, outerHeight) options:
+	//xPosition - Horizontal position of the element
+	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+	jQuery('.home').parallax("0%",0.1),("60%",0);
+	jQuery('.about').parallax("0%", 0.1);
+	jQuery('.design').parallax("0%", 0.4);
+	// jQuery('#third').parallax("50%", 0.3);
 
+
+
+//gallery............................................................. 
+// imgHolder.mouseover(function(){
+
+// 		jQuery(this).css({
+
+// 			left : Math.random(-25,+25),
+// 			top  : Math.random(-25,+25)
+// 		});
+// 	});
+
+// 	thumbnail.click(function(){
+
+// 		darkBox.css({display:'block'});
+
+// 		var thumbHref = jQuery(this).children().attr('href');
+
+// 		jQuery('section.darkbox img').attr('src',thumbHref);
+
+// 		return false;
+// 	});
 });
