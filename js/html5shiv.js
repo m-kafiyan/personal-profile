@@ -1,14 +1,19 @@
-/*! HTML5 Shiv v3.6 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed */
+/**
+* @preserve HTML5 Shiv 3.7.2 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
+*/
 ;(function(window, document) {
 /*jshint evil:true */
+  /** version */
+  var version = '3.7.2';
+
   /** Preset options */
   var options = window.html5 || {};
 
   /** Used to skip problem elements */
   var reSkip = /^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i;
 
-  /** Not all elements can be cloned in IE (this list can be shortend) **/
-  var saveClones = /^<|^(?:a|b|button|code|div|fieldset|form|h1|h2|h3|h4|h5|h6|i|iframe|img|input|label|li|link|ol|option|p|param|q|script|select|span|strong|style|table|tbody|td|textarea|tfoot|th|thead|tr|ul)$/i;
+  /** Not all elements can be cloned in IE **/
+  var saveClones = /^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i;
 
   /** Detect whether the browser supports default html5 styles */
   var supportsHtml5Styles;
@@ -43,6 +48,7 @@
           );
         }());
     } catch(e) {
+      // assign a false positive if detection fails => unable to shiv
       supportsHtml5Styles = true;
       supportsUnknownElements = true;
     }
@@ -75,8 +81,26 @@
     var elements = html5.elements;
     return typeof elements == 'string' ? elements.split(' ') : elements;
   }
-  
-    /**
+
+  /**
+   * Extends the built-in list of html5 elements
+   * @memberOf html5
+   * @param {String|Array} newElements whitespace separated list or array of new element names to shiv
+   * @param {Document} ownerDocument The context document.
+   */
+  function addElements(newElements, ownerDocument) {
+    var elements = html5.elements;
+    if(typeof elements != 'string'){
+      elements = elements.join(' ');
+    }
+    if(typeof newElements != 'string'){
+      newElements = newElements.join(' ');
+    }
+    html5.elements = elements +' '+ newElements;
+    shivDocument(ownerDocument);
+  }
+
+   /**
    * Returns the data associated to the given document
    * @private
    * @param {Document} ownerDocument The document.
@@ -127,7 +151,7 @@
     //   a 403 response, will cause the tab/window to crash
     // * Script elements appended to fragments will execute when their `src`
     //   or `text` property is set
-    return node.canHaveChildren && !reSkip.test(nodeName) ? data.frag.appendChild(node) : node;
+    return node.canHaveChildren && !reSkip.test(nodeName) && !node.tagUrn ? data.frag.appendChild(node) : node;
   }
 
   /**
@@ -181,7 +205,7 @@
       'var n=f.cloneNode(),c=n.createElement;' +
       'h.shivMethods&&(' +
         // unroll the `createElement` calls
-        getElements().join().replace(/\w+/g, function(nodeName) {
+        getElements().join().replace(/[\w\-:]+/g, function(nodeName) {
           data.createElem(nodeName);
           data.frag.createElement(nodeName);
           return 'c("' + nodeName + '")';
@@ -207,9 +231,11 @@
     if (html5.shivCSS && !supportsHtml5Styles && !data.hasCSS) {
       data.hasCSS = !!addStyleSheet(ownerDocument,
         // corrects block display not defined in IE6/7/8/9
-        'article,aside,figcaption,figure,footer,header,hgroup,nav,section{display:block}' +
+        'article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}' +
         // adds styling not present in IE6/7/8/9
-        'mark{background:#FF0;color:#000}'
+        'mark{background:#FF0;color:#000}' +
+        // hides non-rendered elements
+        'template{display:none}'
       );
     }
     if (!supportsUnknownElements) {
@@ -236,7 +262,12 @@
      * @memberOf html5
      * @type Array|String
      */
-    'elements': options.elements || 'abbr article aside audio bdi canvas data datalist details figcaption figure footer header hgroup mark meter nav output progress section summary time video',
+    'elements': options.elements || 'abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output picture progress section summary template time video',
+
+    /**
+     * current version of html5shiv
+     */
+    'version': version,
 
     /**
      * A flag to indicate that the HTML5 style sheet should be inserted.
@@ -274,7 +305,10 @@
     createElement: createElement,
 
     //creates a shived documentFragment
-    createDocumentFragment: createDocumentFragment
+    createDocumentFragment: createDocumentFragment,
+
+    //extends list of elements
+    addElements: addElements
   };
 
   /*--------------------------------------------------------------------------*/
