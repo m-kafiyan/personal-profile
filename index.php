@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="js/js.js"></script>
 </head>
 <body>
-	<section>
+	<section class="firstsection">
 		<div class="balls">
 					<div class="ball1"></div>
 					<div class="ball2"></div>
@@ -27,13 +27,15 @@
 					<div class="ball13"></div>
 					<div class="ball14"></div>
 		</div>
+		<div class="whiteball">
+			<div class="textabout"></div>
+		</div>
 <!-- 		<div id="mask">
 			<div class="index" id="index">
 				
 			</div>
 			<div class="about" id="about"></div>
 			<div class="contact" id="contact"></div> -->
-		</div>
 	</section>
 
 </body>
